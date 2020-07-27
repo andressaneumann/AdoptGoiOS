@@ -20,6 +20,12 @@ class PetDAO : NSObject {
         
         let nino = Dog(breed: "Dachshund", gender: .male, name: "Nino", size: .small, dateOfBirth: Date(), description: "Nino é um cão para adoção.", imagePath: "dachs", adopted: false)
         
-        return [thor, dante, annie, nino]
+        let billy = Dog(breed: "SRD", gender: .male, name: "Billy", size: .medium, dateOfBirth: Date(), description: "Billy é um cão para adoção.", imagePath: "lilo", adopted: false)
+        
+        let aladin = Cat(breed: "Persa", gender: .male, name: "Aladin", size: .medium, dateOfBirth: Date(), description: "Billy é um gato para adoção.", imagePath: "aladin", adopted: false)
+        
+        let tom = Cat(breed: "Siames", gender: .male, name: "Tom", size: .medium, dateOfBirth: Date(), description: "Tom é um gato para adoção.", imagePath: "tom", adopted: false)
+        
+        return [thor, dante, aladin, annie, tom, nino, billy]
     }
 }

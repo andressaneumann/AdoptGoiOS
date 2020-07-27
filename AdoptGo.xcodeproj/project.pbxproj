@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C1032B424CF42EC00A8E5ED /* PetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1032B324CF42EC00A8E5ED /* PetCollectionViewCell.swift */; };
+		6C1032B624CF8B0F00A8E5ED /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1032B524CF8B0F00A8E5ED /* Cat.swift */; };
 		6CB197E824C64F2300648E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB197E724C64F2300648E0F /* AppDelegate.swift */; };
 		6CB197EA24C64F2300648E0F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB197E924C64F2300648E0F /* HomeViewController.swift */; };
 		6CB197EC24C64F2300648E0F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB197EB24C64F2300648E0F /* SecondViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		6C1032B324CF42EC00A8E5ED /* PetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetCollectionViewCell.swift; sourceTree = "<group>"; };
+		6C1032B524CF8B0F00A8E5ED /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		6CB197E424C64F2300648E0F /* AdoptGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdoptGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB197E724C64F2300648E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CB197E924C64F2300648E0F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		6CF6F87124CC8D8F00145FD7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6C1032B524CF8B0F00A8E5ED /* Cat.swift */,
 				6CF6F87224CC8DA600145FD7 /* Dog.swift */,
 				6CF6F87424CC8E5600145FD7 /* Pet.swift */,
 			);
@@ -194,6 +197,7 @@
 				6CB197EC24C64F2300648E0F /* SecondViewController.swift in Sources */,
 				6CB197E824C64F2300648E0F /* AppDelegate.swift in Sources */,
 				6CF6F87324CC8DA600145FD7 /* Dog.swift in Sources */,
+				6C1032B624CF8B0F00A8E5ED /* Cat.swift in Sources */,
 				6CF6F87824CCA04500145FD7 /* PetDAO.swift in Sources */,
 				6C1032B424CF42EC00A8E5ED /* PetCollectionViewCell.swift in Sources */,
 				6CB197EA24C64F2300648E0F /* HomeViewController.swift in Sources */,
