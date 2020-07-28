@@ -10,13 +10,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdoptGo/DetailsPage/Controller/DetailViewController.swift"
-            timestampString = "617656822.291348"
+            timestampString = "617667277.310461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
             landmarkName = "DetailViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdoptGo.DetailViewController.petSelected.getter : Swift.Optional&lt;AdoptGo.Pet&gt;"
+                  moduleName = "AdoptGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andressa.silva/Desktop/Projects/iOS/AdoptGo/AdoptGo/DetailsPage/Controller/DetailViewController.swift"
+                  timestampString = "617663849.051506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdoptGo.DetailViewController.petSelected.setter : Swift.Optional&lt;AdoptGo.Pet&gt;"
+                  moduleName = "AdoptGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andressa.silva/Desktop/Projects/iOS/AdoptGo/AdoptGo/DetailsPage/Controller/DetailViewController.swift"
+                  timestampString = "617663849.053544"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "135">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdoptGo.DetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; AdoptGo.DetailViewController"
+                  moduleName = "AdoptGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andressa.silva/Desktop/Projects/iOS/AdoptGo/AdoptGo/DetailsPage/Controller/DetailViewController.swift"
+                  timestampString = "617663849.055284"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "801">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AdoptGo.DetailViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;AdoptGo.DetailViewController&gt;"
+                  moduleName = "AdoptGo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andressa.silva/Desktop/Projects/iOS/AdoptGo/AdoptGo/DetailsPage/Controller/DetailViewController.swift"
+                  timestampString = "617663849.056937"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "772">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,7 +88,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdoptGo/DetailsPage/Controller/DetailViewController.swift"
-            timestampString = "617656822.291424"
+            timestampString = "617667277.310527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -42,7 +104,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AdoptGo/PetsPage/Controller/PetsViewController.swift"
-            timestampString = "617656822.291483"
+            timestampString = "617667277.3105789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"

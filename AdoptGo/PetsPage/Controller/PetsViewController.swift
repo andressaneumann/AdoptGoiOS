@@ -73,15 +73,11 @@ extension PetsViewController: UISearchBarDelegate {
 }
 
 extension PetsViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let petSelected = filteredPetList[indexPath.row]
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let controller = storyboard.instantiateViewController(withIdentifier: "details") as! DetailViewController
-        
-        controller.petSelected = petSelected
-        self.present(controller, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailViewController {
+            destination.petSelected = filteredPetList[(tableView.indexPathForSelectedRow?.row)!]
+        }
     }
     
 }
