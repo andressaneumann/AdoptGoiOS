@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var petImageView: UIImageView!
     @IBOutlet weak var petDescriptionLabel: UILabel!
     
+    @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var petSizeLabel: UILabel!
     var petSelected: Pet? = nil
     
@@ -30,11 +31,14 @@ class DetailViewController: UIViewController {
             self.petDescriptionLabel.text = pet.description
             self.petSizeLabel.text = pet.size.rawValue
         }
-        
     }
     
     @IBAction func backButton(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        viewContainer.roundCorners(corners: [.topLeft, .topRight], radius: 15)
+    }
 }

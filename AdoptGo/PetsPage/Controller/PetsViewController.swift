@@ -23,11 +23,13 @@ class PetsViewController: UIViewController {
         self.tableView.delegate = self
         petSearchBar.delegate = self
         
+        filteredPetList = petList
+        
         self.amountOfAvailablePets.text = updateLabelWithPetCount()
     }
     
     func updateLabelWithPetCount() -> String {
-        return petList.count == 1 ? "1 disponível" : " \(petList.count) disponíveis"
+        return filteredPetList.count == 1 ? "1 disponível" : " \(filteredPetList.count) disponíveis"
     }
     
 }
@@ -35,16 +37,16 @@ class PetsViewController: UIViewController {
 extension PetsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return petList.count
+        return filteredPetList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let petTableViewCell = tableView.dequeueReusableCell(withIdentifier: String(describing: PetTableViewCell.self), for: indexPath) as? PetTableViewCell else { return UITableViewCell()}
         
-        let pet = petList[indexPath.row]
+        let pet = filteredPetList[indexPath.row]
         
         petTableViewCell.configureCell(pet)
-        petTableViewCell.layer.cornerRadius = 8
+        //petTableViewCell.layer.cornerRadius = 8
         
         return petTableViewCell
     }
@@ -52,27 +54,28 @@ extension PetsViewController: UITableViewDataSource {
 
 extension PetsViewController: UISearchBarDelegate {
     
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        
-//        filteredPetList = petList
-//
-//        if !searchText.isEmpty {
-//            let petListFilter = NSPredicate(format: "name CONTAINS[c] %@", searchText)
-//
-//            let filteredList: Array<Pet> = (filteredPetList as NSArray).filtered(using: petListFilter) as! Array
-//
-//            filteredPetList = filteredList
-//        }
-//
-//        tableView.reloadData()
-//        
-//    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredPetList = petList
+
+        if !searchText.isEmpty {
+            let filteredList: Array<Pet> = petList.filter { (pet) -> Bool in
+                return pet.name.lowercased().contains(searchText.trimmingCharacters(in: .whitespacesAndNewlines).lowercased())
+            }
+
+            filteredPetList = filteredList
+        }
+        
+        self.amountOfAvailablePets.text = updateLabelWithPetCount()
+        tableView.reloadData()
+        
+    }
 }
 
 extension PetsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let petSelected = petList[indexPath.row]
+        let petSelected = filteredPetList[indexPath.row]
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         let controller = storyboard.instantiateViewController(withIdentifier: "details") as! DetailViewController
