@@ -187,7 +187,7 @@
         <!--Pets-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="AdoptGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="PetsViewController" customModule="AdoptGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,16 +221,86 @@
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9bj-g0-u7s">
                                 <rect key="frame" x="20" y="190" width="335" height="418"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="egW-pw-dPG">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PetTableViewCell" rowHeight="148" id="egW-pw-dPG" customClass="PetTableViewCell" customModule="AdoptGo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="egW-pw-dPG" id="rv0-MV-dhN">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="147.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="DTI-07-d7G">
+                                                    <rect key="frame" x="190" y="0.0" width="125" height="92"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYm-yv-B05">
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="54"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECc-Kf-VPT">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="41" height="54"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="gender" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EL-f4-gZg">
+                                                                    <rect key="frame" x="41" y="0.0" width="84" height="54"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                                    <color key="textColor" red="0.32156862749999998" green="0.23137254900000001" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="54" id="gcf-hp-bLF"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raça" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vq7-09-Jv3">
+                                                            <rect key="frame" x="0.0" y="57" width="125" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTq-Yz-96K">
+                                                            <rect key="frame" x="0.0" y="76" width="125" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="cYm-yv-B05" secondAttribute="trailing" id="3LE-kR-021"/>
+                                                        <constraint firstItem="cYm-yv-B05" firstAttribute="leading" secondItem="DTI-07-d7G" secondAttribute="leading" id="40i-Uy-zow"/>
+                                                        <constraint firstItem="cYm-yv-B05" firstAttribute="top" secondItem="DTI-07-d7G" secondAttribute="top" id="84i-XL-n9j"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cYm-yv-B05" secondAttribute="trailing" id="R95-OT-TsI"/>
+                                                        <constraint firstItem="cYm-yv-B05" firstAttribute="top" secondItem="DTI-07-d7G" secondAttribute="top" id="TjG-Gt-p7E"/>
+                                                        <constraint firstItem="cYm-yv-B05" firstAttribute="leading" secondItem="DTI-07-d7G" secondAttribute="leading" id="vbH-dK-2IU"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hyY-j6-RfV">
+                                                    <rect key="frame" x="0.0" y="16" width="180" height="115"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="180" id="E82-SE-gJq"/>
+                                                        <constraint firstAttribute="height" constant="115" id="Ot5-6c-FVY"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="hyY-j6-RfV" secondAttribute="bottom" constant="16.5" id="2Cj-aw-DEc"/>
+                                                <constraint firstItem="hyY-j6-RfV" firstAttribute="leading" secondItem="rv0-MV-dhN" secondAttribute="leading" id="NzZ-Co-OdM"/>
+                                                <constraint firstItem="DTI-07-d7G" firstAttribute="leading" secondItem="hyY-j6-RfV" secondAttribute="trailing" constant="10" id="Xrk-Om-TPq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DTI-07-d7G" secondAttribute="trailing" constant="5" id="Y2a-zs-Hkj"/>
+                                                <constraint firstItem="DTI-07-d7G" firstAttribute="top" secondItem="rv0-MV-dhN" secondAttribute="top" id="sZr-JH-eSc"/>
+                                                <constraint firstItem="hyY-j6-RfV" firstAttribute="top" secondItem="rv0-MV-dhN" secondAttribute="top" constant="16" id="tWo-ow-a2M"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="petAge" destination="pTq-Yz-96K" id="t1x-7k-IX3"/>
+                                            <outlet property="petBreed" destination="vq7-09-Jv3" id="ptw-4h-XOR"/>
+                                            <outlet property="petGender" destination="4EL-f4-gZg" id="2qz-6F-dCc"/>
+                                            <outlet property="petImage" destination="hyY-j6-RfV" id="Xjt-KR-bTT"/>
+                                            <outlet property="petName" destination="ECc-Kf-VPT" id="gLA-ta-e5f"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -248,6 +318,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pets" image="pets-icon " id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tableView" destination="9bj-g0-u7s" id="Afm-gI-mfv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

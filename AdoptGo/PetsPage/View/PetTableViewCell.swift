@@ -9,16 +9,20 @@
 import UIKit
 
 class PetTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    
+    @IBOutlet weak var petImage: UIImageView!
+    @IBOutlet weak var petBreed: UILabel!
+    @IBOutlet weak var petName: UILabel!
+    @IBOutlet weak var petAge: UILabel!
+    @IBOutlet weak var petGender: UILabel!
+    
+    func configureCell(_ pet: Pet) {
+        petImage.image = UIImage(named: pet.imagePath)
+        petBreed.text = pet.breed
+        petName.text = pet.name
+        petGender.text = pet.gender.rawValue
+        petAge.text = "Age"
     }
 
 }

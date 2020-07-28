@@ -20,5 +20,5 @@ class PetCollectionViewCell: UICollectionViewCell {
         petBreed.text = pet.breed
         petName.text = pet.name
         petGender.text = pet.gender.rawValue
-    }    
+    }
 }
