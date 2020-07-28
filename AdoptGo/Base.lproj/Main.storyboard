@@ -148,36 +148,83 @@
         <!--Detail View Controller-->
         <scene sceneID="QXW-8T-9xv">
             <objects>
-                <viewController id="cpY-MN-35y" customClass="DetailViewController" customModule="AdoptGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="details" id="cpY-MN-35y" customClass="DetailViewController" customModule="AdoptGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7WB-3W-dfV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UfS-TT-iDm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UfS-TT-iDm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="370"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="306" id="egr-84-809"/>
+                                    <constraint firstAttribute="height" constant="370" id="egr-84-809"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oR-uX-UWu">
-                                <rect key="frame" x="0.0" y="286" width="375" height="381"/>
+                                <rect key="frame" x="0.0" y="350" width="375" height="317"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hky-wn-k8u">
+                                        <rect key="frame" x="20" y="10" width="335" height="297"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLx-Ud-4cH">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="256"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raça" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elq-Ps-4br">
+                                                <rect key="frame" x="0.0" y="256" width="335" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNg-h8-4M2">
+                                                <rect key="frame" x="0.0" y="276.5" width="335" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Hky-wn-k8u" secondAttribute="trailing" constant="20" id="Eeu-Td-hgI"/>
+                                    <constraint firstItem="Hky-wn-k8u" firstAttribute="leading" secondItem="5oR-uX-UWu" secondAttribute="leading" constant="20" id="QMl-Gi-Mpg"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hky-wn-k8u" secondAttribute="bottom" constant="10" id="YjT-ED-p8c"/>
+                                    <constraint firstItem="Hky-wn-k8u" firstAttribute="top" secondItem="5oR-uX-UWu" secondAttribute="top" constant="10" id="lC7-Eh-c3f"/>
+                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JH-C4-eke">
+                                <rect key="frame" x="0.0" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LUb-Gv-eVu"/>
+                                    <constraint firstAttribute="width" constant="50" id="klM-jC-fba"/>
+                                </constraints>
+                                <state key="normal" image="back-icon-white"/>
+                                <connections>
+                                    <action selector="backButton:" destination="cpY-MN-35y" eventType="touchUpInside" id="pdf-eg-Ztc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UfS-TT-iDm" firstAttribute="leading" secondItem="l2D-5J-XkH" secondAttribute="leading" id="24a-mP-Z0G"/>
                             <constraint firstItem="l2D-5J-XkH" firstAttribute="bottom" secondItem="5oR-uX-UWu" secondAttribute="bottom" id="Dra-RR-CjZ"/>
                             <constraint firstItem="5oR-uX-UWu" firstAttribute="top" secondItem="UfS-TT-iDm" secondAttribute="bottom" constant="-20" id="I8B-gz-gek"/>
+                            <constraint firstItem="6JH-C4-eke" firstAttribute="leading" secondItem="l2D-5J-XkH" secondAttribute="leading" id="Jq2-oH-niO"/>
                             <constraint firstItem="5oR-uX-UWu" firstAttribute="leading" secondItem="l2D-5J-XkH" secondAttribute="leading" id="Kuw-Rd-axD"/>
                             <constraint firstItem="UfS-TT-iDm" firstAttribute="trailing" secondItem="l2D-5J-XkH" secondAttribute="trailing" id="j7U-bV-A0t"/>
                             <constraint firstItem="l2D-5J-XkH" firstAttribute="trailing" secondItem="5oR-uX-UWu" secondAttribute="trailing" id="juS-zE-ja8"/>
+                            <constraint firstItem="6JH-C4-eke" firstAttribute="top" secondItem="l2D-5J-XkH" secondAttribute="top" id="oAK-DQ-5UF"/>
                             <constraint firstItem="UfS-TT-iDm" firstAttribute="top" secondItem="7WB-3W-dfV" secondAttribute="top" id="z57-Rl-Ujs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l2D-5J-XkH"/>
                     </view>
                     <connections>
-                        <outlet property="viewBackground" destination="5oR-uX-UWu" id="qgs-Fi-YDm"/>
+                        <outlet property="petBreedLabel" destination="elq-Ps-4br" id="aRF-d2-Qjz"/>
+                        <outlet property="petGenderLabel" destination="tNg-h8-4M2" id="085-lA-MdZ"/>
+                        <outlet property="petImageView" destination="UfS-TT-iDm" id="vkL-e2-uYc"/>
+                        <outlet property="petNameLabel" destination="eLx-Ud-4cH" id="HDI-59-YtW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESf-fa-dSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,13 +284,13 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="125" height="54"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECc-Kf-VPT">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="41" height="54"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="54"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="gender" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EL-f4-gZg">
-                                                                    <rect key="frame" x="41" y="0.0" width="84" height="54"/>
+                                                                    <rect key="frame" x="43" y="0.0" width="82" height="54"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                                     <color key="textColor" red="0.32156862749999998" green="0.23137254900000001" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
@@ -319,6 +366,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Pets" image="pets-icon " id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="amountOfAvailablePets" destination="YXD-vR-SeV" id="sCe-5L-VL1"/>
+                        <outlet property="petSearchBar" destination="V5M-T0-TWz" id="Kni-nh-TKS"/>
                         <outlet property="tableView" destination="9bj-g0-u7s" id="Afm-gI-mfv"/>
                     </connections>
                 </viewController>
@@ -347,6 +396,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back-icon-white" width="26" height="26"/>
         <image name="home-icon" width="25" height="25"/>
         <image name="pets-icon " width="50" height="50"/>
     </resources>

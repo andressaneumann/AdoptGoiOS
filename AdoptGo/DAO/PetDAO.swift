@@ -12,7 +12,7 @@ class PetDAO : NSObject {
     
     func returnPets() -> Array<Pet> {
         
-        let thor = Dog(breed: "Golden", gender: .male, name: "Thor", size: .medium, dateOfBirth: Date(), description: "Thor é um cão para adoção.", imagePath: "thor", adopted: false)
+        let thor = Dog(breed: "Golden", gender: .male, name: "Thor", size: .medium, dateOfBirth: Date(), description: "Thor é um cão para adoção.", imagePath: "thor1", adopted: false)
         
         let dante = Dog(breed: "SRD", gender: .male, name: "Dante", size: .medium, dateOfBirth: Date(), description: "Dante é um cão para adoção.", imagePath: "dante", adopted: false)
         
