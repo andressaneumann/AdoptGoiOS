@@ -53,6 +53,11 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth = collectionView.bounds.width/2
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return CGSize(width: cellWidth - 6, height: 400)
+
+        }
         return CGSize(width: cellWidth - 5, height: 230)
     }
     
