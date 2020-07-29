@@ -14,7 +14,7 @@ class PetDAO : NSObject {
         
         let thor = Dog(breed: "Golden", gender: .male, name: "Thor", size: .medium, dateOfBirth: Date(), description: "Thor é um cão para adoção.", imagePath: "thor1", adopted: false)
         
-        let dante = Dog(breed: "SRD", gender: .male, name: "Dante", size: .medium, dateOfBirth: Date(), description: "Dante é um cão para adoção.", imagePath: "dante", adopted: false)
+        let dante = Dog(breed: "Sem raça definida", gender: .male, name: "Dante", size: .medium, dateOfBirth: Date(), description: "Dante é um cão para adoção.", imagePath: "dante", adopted: false)
         
         let annie = Dog(breed: "Border", gender: .female, name: "Annie", size: .large, dateOfBirth: Date(), description: "Annie é uma cadela para adoção.", imagePath: "annie", adopted: false)
         

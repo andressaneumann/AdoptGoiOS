@@ -19,6 +19,9 @@ class PetsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.topItem?.title = "Pets"
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
         petSearchBar.delegate = self

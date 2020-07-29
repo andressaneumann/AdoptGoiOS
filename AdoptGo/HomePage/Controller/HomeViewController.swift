@@ -17,6 +17,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        
+        self.navigationController?.navigationBar.topItem?.title = "Home"
+
     }
     
     func setupCollectionView() {
