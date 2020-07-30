@@ -55,7 +55,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         let cellWidth = collectionView.bounds.width/2
         
         if UIDevice.current.userInterfaceIdiom == .pad {
-            return CGSize(width: cellWidth - 6, height: 400)
+            return CGSize(width: cellWidth - 6, height: 440)
 
         }
         return CGSize(width: cellWidth - 5, height: 230)

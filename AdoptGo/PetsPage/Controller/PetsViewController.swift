@@ -49,7 +49,11 @@ extension PetsViewController: UITableViewDataSource {
         let pet = filteredPetList[indexPath.row]
         
         petTableViewCell.configureCell(pet)
-        //petTableViewCell.layer.cornerRadius = 8
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            tableView.rowHeight = 300
+            
+        }
         
         return petTableViewCell
     }
